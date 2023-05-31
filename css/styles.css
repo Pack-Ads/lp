@@ -10915,6 +10915,10 @@ footer.footer {
   padding-bottom: 4rem;
 }
 
+.btn-primary {
+  background-color: #0042da;
+}
+
 .btn-success {
       --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
     --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
