@@ -10956,4 +10956,5 @@ footer.footer {
     --tve-applied-background-image: none!important;
     --background-color: rgb(43,174,118)!important;
     --tve-applied-background-color: rgb(43,174,118)!important;
+    font-weight: bold;
 }
