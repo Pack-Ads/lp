@@ -93,7 +93,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: var(--bs-font-sans-serif);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -10840,7 +10840,7 @@ textarea.form-control-lg {
 
 header.masthead {
   position: relative;
-  background-color: #0042da;
+  background-color: #e2e8f0;
   background-size: cover;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -10848,15 +10848,16 @@ header.masthead {
 header.masthead:before {
   content: "";
   position: absolute;
-  background-color: #1c375e;
+  background-color: #e2e8f0;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0;
 }
 header.masthead h1, header.masthead .h1 {
   font-size: 2rem;
+  color: #1b42da;
 }
 @media (min-width: 768px) {
   header.masthead {
@@ -10894,7 +10895,7 @@ header.masthead h1, header.masthead .h1 {
 
 .call-to-action {
   position: relative;
-  background-color: #0042da;
+  background-color: #e2e8f0;
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -10907,16 +10908,18 @@ header.masthead h1, header.masthead .h1 {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0;
 }
-
+.call-to-action h2 {
+  color: #1b42da;
+}
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
 .btn-primary {
-  background-color: #0042da;
+  background-color: #1b42da;
 }
 
 .btn-success {
