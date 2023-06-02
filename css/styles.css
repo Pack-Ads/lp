@@ -4,6 +4,7 @@
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/LICENSE)
 */
+
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -90,6 +91,44 @@
     scroll-behavior: smooth;
   }
 }
+
+@font-face {
+  font-family: '29LT Bukra';
+  src: url('../fonts/29LTBukra-Black.woff2') format('woff2'),
+      url('../fonts/29LTBukra-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '29LT Bukra';
+  src: url('../fonts/29LTBukra-Medium.woff2') format('woff2'),
+      url('../fonts/29LTBukra-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '29LT Bukra';
+  src: url('../fonts/29LTBukra-Bold.woff2') format('woff2'),
+      url('../fonts/29LTBukra-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '29LT Bukra';
+  src: url('../fonts/29LTBukra.woff2') format('woff2'),
+      url('../fonts/29LTBukra.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 
 body {
   margin: 0;
@@ -3766,13 +3805,19 @@ textarea.form-control-lg {
   justify-content: space-between;
 }
 .navbar-brand {
+  display: flex;
+  align-items: center;
   padding-top: var(--bs-navbar-brand-padding-y);
   padding-bottom: var(--bs-navbar-brand-padding-y);
   margin-right: var(--bs-navbar-brand-margin-end);
+  font-family: '29LT Bukra';
   font-size: var(--bs-navbar-brand-font-size);
   color: var(--bs-navbar-brand-color);
   text-decoration: none;
   white-space: nowrap;
+}
+.navbar-brand svg {
+  margin-right: 10px;
 }
 .navbar-brand:hover, .navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
@@ -10825,11 +10870,15 @@ textarea.form-control-lg {
   }
 }
 .features-icons {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .features-icons .features-icons-item {
-  max-width: 20rem;
+  max-width: 25rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px #e2e8f0;
+  border-radius: 20px;
+  padding: 2rem;
 }
 .features-icons .features-icons-item .features-icons-icon {
   height: 7rem;
