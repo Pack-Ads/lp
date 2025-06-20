@@ -1,155 +1,500 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Desbloqueie o poder dos seus anúncios no Facebook sem limites — sem blocks!" />
-    <meta name="author" content="Pack Ads" />
-    <title>Pack Ads</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css?v=1" rel="stylesheet" />
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Ads - The end of an era</title>
+    <meta name="description" content="The end of an era" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --zuck: url("data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAyCAYAAAA0j3keAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODQ2NzUzN0E1MTZBMTFFRUE2RjdDMTRFMjI3NDIwNDciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODQ2NzUzN0I1MTZBMTFFRUE2RjdDMTRFMjI3NDIwNDciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NDY3NTM3ODUxNkExMUVFQTZGN0MxNEUyMjc0MjA0NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4NDY3NTM3OTUxNkExMUVFQTZGN0MxNEUyMjc0MjA0NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtVu3IkAABGrSURBVHjajFlpjJ3n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");
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: #0040df;
+            color: #fff;
+            min-height: 100vh;
+            padding: 2rem;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .splash {
+            position: fixed;
+            width: 90vw;
+            max-width: 700px;
+            height: 70px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .run {
+            position: relative;
+            display: flex;
+            width: 100px;
+            animation: run 10s linear infinite;
+        }
+
+        .pacman {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #FFF;
+            position: relative;
+            animation: pacman 0.3s infinite alternate;
+        }
+
+        .pacman::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            top: 10px;
+            right: 20px;
+            background: #0040df;
+        }
+
+        .zuck {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background-image: var(--zuck);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: zuck 0.14s infinite alternate ease-in-out;
+        }
+
+        @keyframes run {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(calc(min(90vw, 700px) - 100%));
+            }
+            51% {
+                transform: translateX(calc(min(90vw, 700px) - 100%)) scaleX(-1);
+            }
+            99% {
+                transform: translateX(0) scaleX(-1);
+            }
+        }
+
+        @keyframes pacman {
+            from {
+                clip-path: polygon(50% 50%, 100% 20%, 100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 80%);
+            }
+            to {
+                clip-path: polygon(50% 50%, 100% 50%, 100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 50%);
+            }
+        }
+
+        @keyframes zuck {
+            from {
+                transform: rotate(-10deg);
+            }
+            to {
+                transform: rotate(10deg);
+            }
+        }
+
+        .terminal {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(5px);
+        }
+
+        .terminal-header {
+            background: #222;
+            padding: 0.5rem 1rem;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .terminal-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .btn-close { background: #ff5f57; }
+        .btn-minimize { background: #ffbd2e; }
+        .btn-maximize { background: #28ca42; }
+
+        .terminal-title {
+            color: #888;
+            font-size: 0.9rem;
+            margin-left: 1rem;
+        }
+
+        .terminal-body {
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .line {
+            opacity: 0;
+            transform: translateY(5px);
+            transition: all 0.3s ease;
+        }
+
+        .line.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .prompt {
+            color: #FFF;
+            margin: 0.5rem 0;
+        }
+
+        .prompt::before {
+            content: "packads@system:~$ ";
+            color: #28ca42;
+            font-weight: bold;
+        }
+
+        .output {
+            margin: 0.5rem 0 1rem 0;
+            padding-left: 0;
+        }
+
+        .logo {
+            color: #0040df;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .error {
+            color: #ff6b6b;
+        }
+
+        .warning {
+            color: #ffd93d;
+        }
+
+        .info {
+            color: #74c0fc;
+        }
+
+        .success {
+            color: #51cf66;
+        }
+
+        .muted {
+            color: #888;
+        }
+
+        .separator {
+            color: #333;
+            margin: 1rem 0;
+        }
+
+        .typing-cursor {
+            display: inline-block;
+            background-color: #28ca42;
+            width: 2px;
+            height: 1em;
+            animation: blink 0.8s infinite;
+            margin-left: 1px;
+        }
+
+        .cursor {
+            display: inline-block;
+            background-color: #28ca42;
+            width: 8px;
+            height: 1.2em;
+            animation: blink 1s infinite;
+            margin-left: 2px;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .final-prompt {
+            color: #28ca42;
+            margin: 0.5rem 0;
+        }
+
+        .final-prompt::before {
+            content: "packads@system:~$ ";
+            color: #28ca42;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .terminal-body {
+                padding: 1rem;
+                font-size: 0.8rem;
+            }
+
+            .splash {
+                width: 95vw;
+                max-width: none;
+            }
+        }
+    </style>
+     <!-- Google Tag Manager -->
+     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5FH87BJQ');</script>
     <!-- End Google Tag Manager -->
-  </head>
-  <body>
+</head>
+<body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FH87BJQ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- Navigation-->
-    <nav class="navbar navbar-light bg-light static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#" style="font-weight: bold;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 54 54">
-            <g transform="translate(-797 -275)">
-              <path d="M0,22.345C0,11.811,0,6.545,3.272,3.272S11.811,0,22.345,0h9.31c10.533,0,15.8,0,19.073,3.272S54,11.811,54,22.345v9.31c0,10.533,0,15.8-3.272,19.073S42.189,54,31.655,54h-9.31c-10.533,0-15.8,0-19.072-3.272S0,42.189,0,31.655Z" transform="translate(797 275)" fill="#0042da"></path>
-              <rect width="6" height="6" rx="2" transform="translate(810 288)" fill="#edecff"></rect>
-              <rect width="6" height="6" rx="2" transform="translate(810 299)" fill="#edecff"></rect>
-              <rect width="6" height="6" rx="2" transform="translate(810 310)" fill="#edecff"></rect>
-              <rect width="6" height="6" rx="2" transform="translate(821 288)" fill="#edecff"></rect>
-              <rect width="6" height="6" rx="2" transform="translate(821 299)" fill="#edecff"></rect>
-              <rect width="6" height="6" rx="2" transform="translate(832 288)" fill="#edecff"></rect>
-              <rect width="6" height="6" rx="2" transform="translate(832 299)" fill="#edecff"></rect>
-            </g>
-          </svg>
-          Pack Ads
-        </a>
-        <a class="btn btn-primary fw-bolder" href="https://app.packads.com.br/auth">Login</a>
-      </div>
-    </nav>
-    <!-- Masthead-->
-    <header class="masthead">
-      <div class="container position-relative">
-        <div class="row justify-content-center">
-          <div class="col-xl-6">
-            <div class="text-center text-white">
-              <!-- Page heading-->
-              <h1 class="mb-5">Desbloqueie o poder dos seus anúncios no Facebook sem limites — sem blocks!</h1>
-              <a class="btn btn-primary btn-lg fw-bolder" href="https://app.packads.com.br/auth?mode=register">TESTE GRÁTIS POR 7 DIAS!</a>
-            </div>
-          </div>
+    <div class="splash">
+        <div class="run">
+            <div class="pacman"></div>
+            <div class="zuck"></div>
         </div>
-      </div>
-    </header>
-    <!-- Icons Grid-->
-    <section class="features-icons bg-light text-center">
-      <div class="container">
-        <h2 class="pb-3">Porque usar a Pack Ads?</h2>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div class="features-icons-icon d-flex"><i class="bi-slash-circle m-auto text-primary"></i></div>
-              <h3 class="fs-4">Menos Bloqueios</h3>
-              <p class="lead mb-0">Maximize seu potencial de negócios, sem restrições desnecessárias. Desperte o crescimento com anúncios ininterruptos.</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div class="features-icons-icon d-flex"><i class="bi-graph-up m-auto text-primary"></i></div>
-              <h3 class="fs-4">Aumente seu ROAS</h3>
-              <p class="lead mb-0">Aumente seu ROAS ativando o "leilão paralelo" do Facebook Ads para você ter um tráfego mais qualificado e com menos concorrência!</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-              <div class="features-icons-icon d-flex"><i class="bi-exclamation-triangle m-auto text-primary"></i></div>
-              <h3 class="fs-4">Menos Anúncios Rejeitados</h3>
-              <p class="lead mb-0">Sem anúncios rejeitados, mais sucesso. Alcance seu público-alvo sem interrupções, aproveitando todo o potencial de suas campanhas. </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Image Showcases-->
-    <section class="showcase">
-      <div class="container-fluid p-0">
-        <div class="row g-0 align-items-center">
-          <div class="col-lg-6 order-lg-2 py-5 text-white showcase-img text-center">
-              <img src="assets/img/rej.png" class="img-fluid" style="width: 50%;">
-          </div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Problema</h2>
-            <p class="lead mb-0">Bloqueios e rejeições tiram o seu sono. Seus esforços são em vão, enfrentando barreiras insuperáveis. Perca oportunidades valiosas, lide com incertezas e burocracias intermináveis. Um ciclo exaustivo de desgaste e desânimo. O jogo de anúncios no Facebook se torna uma batalha árdua, onde a vitória parece distante.</p>
-          </div>
-        </div>
-        <div class="row g-0 align-items-center">
-          <div class="col-lg-6 text-white showcase-img text-center py-5">
-              <img src="assets/img/metricas.jpg" class="img-fluid">
-          </div>
-          <div class="col-lg-6 my-auto showcase-text">
-            <h2>Solução</h2>
-            <p class="lead mb-0">Simplificamos o processo, eliminando bloqueios e rejeições. Com nossa plataforma inovadora, seus anúncios são otimizados automaticamente para cumprir as diretrizes do Facebook. Aproveite resultados consistentes, alcance seu público-alvo e aumente suas conversões. Pare de se preocupar e comece a colher os frutos do sucesso com a Pack Ads.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 
-    <!-- Call to Action-->
-    <section class="call-to-action text-white text-center" id="signup">
-      <div class="container position-relative">
-        <div class="row justify-content-center">
-          <div class="col-xl-8">
-            <h2 class="mb-4">Pronto para deixar de ser limitado pelo Facebook?</h2>
-            <a class="btn btn-primary btn-lg fw-bolder" id="submitButton" href="https://app.packads.com.br/auth?mode=register">TESTE GRÁTIS POR 7 DIAS!</a>
-          </div>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <div class="btn btn-close"></div>
+                <div class="btn btn-minimize"></div>
+                <div class="btn btn-maximize"></div>
+            </div>
+            <div class="terminal-title">packads@system: ~</div>
         </div>
-      </div>
-    </section>
-    <!-- Footer-->
-    <footer class="footer bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-            <p class="text-muted small mb-4 mb-lg-0">Pack Ads &copy; 2023 &bull; Todos os direitos reservados</p>
-          </div>
-          <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item">
-                <a href="https://www.facebook.com/pack.ads/" target="_blank"><i class="bi-facebook fs-3"></i></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.instagram.com/pack.ads/" target="_blank"><i class="bi-instagram fs-3"></i></a>
-              </li>
-            </ul>
-          </div>
+        
+        <div class="terminal-body" id="terminal-content">
         </div>
-      </div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-  </body>
+    </div>
+
+    <script>
+        const terminalContent = document.getElementById('terminal-content');
+        
+        const commands = [
+            {
+                type: 'command',
+                text: './packads --status',
+                delay: 1000
+            },
+            {
+                type: 'output-block',
+                content: [
+                    { text: 'PACK ADS v2.0', class: 'logo' },
+                    { text: 'The end of an era...', class: 'muted' }
+                ],
+                delay: 500
+            },
+            {
+                type: 'separator',
+                text: '────────────────────────────────────────────────',
+                delay: 800
+            },
+            {
+                type: 'command',
+                text: 'cat project_info.txt',
+                delay: 1200
+            },
+            {
+                type: 'output-block',
+                content: [
+                    { text: 'Project started: January 2023', class: 'info' },
+                    { text: 'Project ended: February 2025', class: 'error' },
+                    { text: 'Total duration: 2 years', class: 'muted' }
+                ],
+                delay: 600
+            },
+            {
+                type: 'command',
+                text: './check_status.sh',
+                delay: 1000
+            },
+            {
+                type: 'output-block',
+                content: [
+                    { text: '[WARNING] Operation discontinued', class: 'warning' },
+                    { text: 'Reason: Bureaucratic difficulties with Facebook/Meta', class: 'muted' },
+                    { text: 'Decision: Better to give up than insist', class: 'muted' }
+                ],
+                delay: 700
+            },
+            {
+                type: 'command',
+                text: 'cat README.md',
+                delay: 900
+            },
+            {
+                type: 'output-block',
+                content: [
+                    { text: '# Pack Ads', class: 'info' },
+                    { text: 'Unfortunately, after 2 years of development, we faced insurmountable bureaucratic obstacles with Meta/Facebook.', class: 'muted' },
+                    { text: '‎ ', class: 'muted' },
+                    { text: 'It was an incredible journey, but it came to an end.', class: 'muted' }
+                ],
+                delay: 800
+            },
+            {
+                type: 'command',
+                text: './ceo_message.sh',
+                delay: 1100
+            },
+            {
+                type: 'output-block',
+                content: [
+                    { text: "CEO's message:", class: 'success' },
+                    { text: '"Thank you to all who believed in Pack Ads.', class: 'muted' },
+                    { text: 'Unfortunately we were unable to continue due to', class: 'muted' },
+                    { text: 'bureaucratic obstacles. It was a difficult decision,', class: 'muted' },
+                    { text: 'but necessary."', class: 'muted' },
+                    { text: '‎ ', class: 'muted' },
+                    { text: 'Wellington Ferraz', class: 'muted' },
+                    { text: 'CEO of Pack Ads', class: 'muted' }
+                ],
+                delay: 600
+            },
+            {
+                type: 'separator',
+                text: '────────────────────────────────────────────────',
+                delay: 800
+            },
+            {
+                type: 'command',
+                text: 'echo "Maybe we\'ll come back one day..."',
+                delay: 1000
+            },
+            {
+                type: 'output-block',
+                content: [
+                    { text: "Maybe we'll come back one day... 🤔", class: 'info' }
+                ],
+                delay: 500
+            },
+            {
+                type: 'command',
+                text: 'exit',
+                delay: 1200
+            },
+            {
+                type: 'output-block',
+                content: [
+                    { text: 'Pack Ads © 2023-2025 | Project ended', class: 'muted' }
+                ],
+                delay: 500
+            }
+        ];
+
+        function typeWriter(element, text, speed = 50) {
+            return new Promise((resolve) => {
+                let i = 0;
+                const cursor = document.createElement('span');
+                cursor.className = 'typing-cursor';
+                element.appendChild(cursor);
+
+                function type() {
+                    if (i < text.length) {
+                        element.insertBefore(document.createTextNode(text.charAt(i)), cursor);
+                        i++;
+                        setTimeout(type, speed + Math.random() * 30);
+                    } else {
+                        cursor.remove();
+                        resolve();
+                    }
+                }
+                type();
+            });
+        }
+
+        function createLine(className = '') {
+            const line = document.createElement('div');
+            line.className = `line ${className}`;
+            return line;
+        }
+
+        function showLine(line) {
+            setTimeout(() => {
+                line.classList.add('visible');
+            }, 50);
+        }
+
+        async function executeCommands() {
+            for (let i = 0; i < commands.length; i++) {
+                const cmd = commands[i];
+                
+                await new Promise(resolve => setTimeout(resolve, cmd.delay));
+
+                if (cmd.type === 'command') {
+                    const line = createLine('prompt');
+                    terminalContent.appendChild(line);
+                    showLine(line);
+                    await typeWriter(line, cmd.text, 80);
+                    
+                } else if (cmd.type === 'output-block') {
+                    const outputBlock = createLine('output');
+                    terminalContent.appendChild(outputBlock);
+                    showLine(outputBlock);
+                    
+                    for (const output of cmd.content) {
+                        const outputLine = document.createElement('div');
+                        outputLine.className = output.class;
+                        outputLine.textContent = output.text;
+                        outputBlock.appendChild(outputLine);
+                        await new Promise(resolve => setTimeout(resolve, 100));
+                    }
+                    
+                } else if (cmd.type === 'separator') {
+                    const line = createLine('separator');
+                    terminalContent.appendChild(line);
+                    showLine(line);
+                    line.textContent = cmd.text;
+                }
+            }
+
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            const finalLine = createLine('final-prompt');
+            terminalContent.appendChild(finalLine);
+            showLine(finalLine);
+            
+            const cursor = document.createElement('span');
+            cursor.className = 'cursor';
+            finalLine.appendChild(cursor);
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(executeCommands, 500);
+        });
+    </script>
+</body>
 </html>
